@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Oswald:wght@200..700&display=swap');
+
+:root{
+    --cor-principal: #000000;
+    --cor-segundaria: #f7f7f7;
+    --cor-primaria:  #fffb07de;
+    --cor-hover:#fcd811b6;
+    --cor-especial:#190fa7;
+}
+
+*{
+
+    margin: 0;
+    padding:0;
+
+}
+
+.cabecalho_link1,
+.cabecalho_link2{
+    color: var(--cor-segundaria);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+body{
+    background-color: var(--cor-principal);
+}
+
+.cabecalho{
+    display: flex;
+    padding: 40px 0 0;
+    justify-content: space-around;
+    font-family: "Jersey 10", sans-serif; ;
+    color: var(--cor-segundaria);
+}
+
+
+
+.linha {
+    border: none;
+    border-top: 3px solid var(--cor-primaria); /* Espessura e cor da linha */
+    width: 100%; /* Largura da linha */
+}
+
+
+.Titulo , .texto{
+    padding: 2%;
+    font-family: "Oswald", sans-serif;
+    color: var(--cor-segundaria);
+}
+
+.texto_days{
+    font-family: "Oswald", sans-serif;
+    color: var(--cor-principal);
+    padding: 0.4%;
+}
+
+.Days_links{
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.Days_links:hover{
+    color: var(--cor-especial);
+}
+
+
+.Days{
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    background-color: var(--cor-segundaria);
+    font-family: "Jersey 10", sans-serif; ;
+    ;
+}
+
+.img_resolucao{
+    border: 8px solid var(--cor-especial);
+    
+}
+
+.botoes {
+    background: #7eaac73b;
+    color: var(--cor-segundaria);
+    margin: 0.3rem;
+    cursor: pointer;
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    padding: 0.8rem 1.5rem; /* Aumenta o espaço dentro do botão */
+    border: 2px solid var(--cor-segundaria); /* Opcional: adicionar uma borda */
+    border-radius: 5px; /* Opcional: arredondar os cantos */
+}
+
+.texto_corpo{
+    background-color: #ffffffa6;
+}
