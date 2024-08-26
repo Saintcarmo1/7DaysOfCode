@@ -77,7 +77,8 @@ body{
 
 .img_resolucao{
     border: 8px solid var(--cor-especial);
-    
+    display: flex;
+    flex-direction: row;
 }
 
 .botoes {

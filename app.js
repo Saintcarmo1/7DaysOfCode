@@ -59,6 +59,33 @@ function day2(){
     }
 }
 
+function day3() {
+    
+    let area = parseInt(prompt('Digite 1 para Front-End ou 2 para Back-End'));
+    let especialidade, escolha, stack = '';
+
+    while (area !== 1 && area !== 2) {
+        alert('Uma área não válida foi escolhida');
+        area = parseInt(prompt('Digite 1 para Front-End ou 2 para Back-End'));
+    }
+
+    escolha = parseInt(prompt(`Digite 1 se deseja aprender ${area === 1 ? 'React' : 'C#'} ou 2 para ${area === 1 ? 'Vue' : 'Java'}`));
+    especialidade = parseInt(prompt('Pensa em focar na área ou virar Fullstack: 1-Área/ 2-Fullstack'));
+
+    let mensagem = `Vai precisar se aprofundar em ${escolha === 1 ? (area === 1 ? 'React' : 'C#') : (area === 1 ? 'Vue' : 'Java')}`;
+    mensagem += especialidade === 2 ? ' e aprender outras linguagens para se tornar FullStack' : ' para progredir na área';
+    alert(mensagem);
+
+    if (parseInt(prompt('Tem alguma tecnologia que deseja aprender? 1-sim/ 2-não')) === 1) {
+        do {
+            stack = prompt('Diga a tecnologia que você tem interesse:');
+            alert(`Que irado que você quer aprender ${stack}!`);
+        } while (parseInt(prompt('Se tiver outra tecnologia que quiser falar, digite 0 ou se deseja sair, digite 1')) === 0);
+    } else {
+        alert('Continue estudando o que você já está vendo que você irá progredir em sua carreira.');
+    }
+}
+
 //  //verifica se a entrada e um numero convertendo com number
 //   e1 = verifica_numero(entrada1);
 //   e2 = verifica_numero(entrada2);
