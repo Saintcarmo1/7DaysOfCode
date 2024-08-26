@@ -60,7 +60,7 @@ function day2(){
 }
 
 function day3() {
-    
+
     let area = parseInt(prompt('Digite 1 para Front-End ou 2 para Back-End'));
     let especialidade, escolha, stack = '';
 
@@ -85,6 +85,45 @@ function day3() {
         alert('Continue estudando o que você já está vendo que você irá progredir em sua carreira.');
     }
 }
+
+function day4(){
+    let chute = parseInt(prompt('Chute o número secreto:'));
+    let numeroAleatorio = Math.floor(Math.random() * 10);
+    let tentativas = 0;
+    let acertou = 0;
+    let chance = 3;
+    
+    while (acertou === 0) {
+        if (numeroAleatorio === chute) {
+            if (tentativas === 0) {
+                alert('Parabéns!!! Você acertou o número secreto de primeira.');
+            }
+            acertou = 1;
+        } else if (numeroAleatorio != chute) {
+            for (tentativas = 1; tentativas <= 3; tentativas++) {
+                 chance--;
+    
+                if (chute === numeroAleatorio) {
+                    alert('Parabéns!!! Você acertou faltando ' + chance + ' tentativa(s).');
+                    acertou = 1;
+                    break;
+                 }
+    
+                if (chance > 0) {
+                    alert('Não acertou... Mas não desanime, você ainda tem ' + chance + ' chance(s).');
+                    chute = parseInt(prompt('Chute o número secreto novamente:'));
+                }
+    
+                if (chance === 0) {
+                    alert('Errou! Você perdeu todas as chances. O número secreto era: ' + numeroAleatorio);
+                    acertou = 1;
+                    break;
+                }
+            }
+        }
+    }
+}
+    
 
 //  //verifica se a entrada e um numero convertendo com number
 //   e1 = verifica_numero(entrada1);
