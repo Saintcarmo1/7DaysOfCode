@@ -123,6 +123,44 @@ function day4(){
         }
     }
 }
+
+function day5() {
+    let listas = {
+        frutas: [],
+        laticinios: [],
+        congelados: [],
+        doces: []
+    };
+
+    let continuar = true;
+
+    while (continuar) {
+        let adicionar = prompt('Deseja adicionar uma comida na sua lista de compras? (sim/não)');
+        
+        if (adicionar === 'sim') {
+            let produto = prompt('Diga a comida que deseja inserir:');
+            let categoria = prompt('Essa comida se encontra em quais das seguinte categorias: frutas, laticinios, congelados, doces?');
+            
+            if (listas[categoria]) {
+                listas[categoria].push(produto);
+            } else {
+                alert('Categoria inválida. Tente novamente.');
+            }
+        } else if (adicionar === 'não') {
+            alert('Aqui está sua lista de compras:\n' +
+                  'Frutas: ' + listas.frutas.join(', ') + '\n' +
+                  'Laticínios: ' + listas.laticinios.join(', ') + '\n' +
+                  'Comida Congelada: ' + listas.congelados.join(', ') + '\n' +
+                  'Doces: ' + listas.doces.join(', ') + '\n');
+            continuar = false;
+        } else {
+            alert('Resposta inválida. Tente novamente.');
+        }
+    }
+}
+
+
+
     
 
 //  //verifica se a entrada e um numero convertendo com number
