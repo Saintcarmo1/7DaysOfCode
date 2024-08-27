@@ -24,8 +24,11 @@ Cada dia destaca uma tecnologia ou conceito diferente e inclui uma página com i
 ## Como Usar
 
 1. **acesse o site:**
-   7-days-of-code-omega-eight.vercel.app
-2. **clone o repositorio:**
+   
+   https://7-days-of-code-omega-eight.vercel.app
+   
+3. **clone o repositorio:**
+   
    1. git clone https://github.com/Saintcarmo1/7DaysOfCode.git
    2. Abra o Projeto: Navegue até a pasta do projeto e abra o arquivo index.html em um navegador web.
    3. Navegue pelos Exercícios: O site apresenta uma página para cada exercício, com imagens das resoluções e botões para testar as soluções.
