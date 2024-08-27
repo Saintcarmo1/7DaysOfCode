@@ -1,3 +1,22 @@
+let i=0;
+let numero1;
+let numero2;
+
+
+function somar(x,y){return x+y;}
+function subtrair(x,y){return x-y;}
+function multiplicar(x,y){return x*y;}
+function dividir (x,y){return x/y;}
+
+// Mapeamento de operações para funções
+const operacoes = {
+    'soma': somar,
+    'subtração': subtrair,
+    'multiplicação': multiplicar,
+    'divisão': dividir
+};
+
+
 function day1() {
 
     let entrada1 = parseInt(prompt("Digite um número no primeiro: "));
@@ -157,6 +176,76 @@ function day5() {
             alert('Resposta inválida. Tente novamente.');
         }
     }
+}
+
+function day6(){
+let lista_Compras = [];
+let adicionar;
+let produto;
+let index;
+let i = 0;
+
+while (i === 0) {
+    adicionar = prompt('Deseja adicionar uma comida na sua lista de compras? (sim/não)\n' + 
+        'Caso deseje remover algo da lista basta digitar remover. ');
+
+    // Mostra a lista atual antes de pedir uma ação
+    alert('Lista atual: ' + lista_Compras.join(', '));
+
+    if (adicionar === 'sim') {
+        produto = prompt('Diga a comida que deseja inserir:');
+        lista_Compras.push(produto);   
+    } 
+
+    if (adicionar === 'remover') {
+        let remover = prompt('Diga o nome do produto que deseja remover da lista:');
+        let produtoRemovido = false;
+        
+        while ((index = lista_Compras.indexOf(remover)) !== -1) {
+            lista_Compras.splice(index, 1);
+            produtoRemovido = true;  // Marca que pelo menos um produto foi removido
+        }
+        
+        if (!produtoRemovido) {
+            alert('Não tem esse produto na lista em questão');
+        } else {
+            alert('Todos os produtos removidos com sucesso!');
+        }
+    }
+
+    if (adicionar === 'não') {
+        alert('Aqui está sua lista de compras:\n' + lista_Compras.join(', ') + '\n');
+        i = 1;
+    }
+}
+}
+
+
+
+
+
+function day7(){
+    while ( i === 0){
+        let escolher = prompt('Digite qual das seguintes operações que voce deseja fazer:\n' +
+                'soma\n'+ 
+                'subtração\n'+ 
+                'multiplicação\n'+
+                'divisão\n ' + 
+                'sair');
+                if (escolher === 'sair') {
+                    alert('Até a próxima');
+                    i = 1;
+                    continue; // Volta para o início do loop
+                }
+        
+                if (operacoes[escolher]) {
+                    numero1 = parseInt(prompt('Digite o primeiro número:'), 10);
+                    numero2 = parseInt(prompt('Digite o segundo número:'), 10);
+                    alert(operacoes[escolher](numero1, numero2));
+                } else {
+                    alert('Operação inválida. Tente novamente.');
+                }
+            }
 }
 
 

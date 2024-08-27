@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/js.ico" type="image/x-icon">
+    <title>Day 6</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="cabecalho">
+     <a class="cabecalho_link1" href="../index.html">
+             Home
+         </a>
+
+    <img src="../img/logo.png" alt="logo do desafio">
+
+    
+     <a class="cabecalho_link2" href="../Demontracao.html">
+            Demonstrações
+        </a>
+  </nav>
+
+<div class="linha"></div>
+
+<h1 class="Titulo">Desafio Do dia 6</h1> 
+
+<img class="img_resolucao" src="../img/Resolução/Day6.png" alt="Resolução de como foi feito o codigo do dia 6">
+
+
+<div class="texto_corpo">
+    <p class="texto_days"> A imagem a cima demonstra como foi a resoulução do desafio do 6 dia </p>
+
+    <p class="texto_days">
+        O código do dia 6 é semelhante ao do dia 5, mas com a adição de uma nova funcionalidade: a capacidade de excluir itens da lista de compras.
+
+        Este código permite gerenciar uma lista de compras de forma interativa usando JavaScript. Ele usa loops e manipulação de arrays para adicionar e remover itens com base nas escolhas do usuário.
+
+        Inicialmente, o código pergunta ao usuário se deseja adicionar um item à lista de compras. Se a resposta for "sim", o usuário fornece o nome do produto, que é adicionado à lista. A lista atualizada é mostrada ao usuário após cada ação para facilitar o acompanhamento dos itens.
+     </p>
+
+    <p class="texto_days">
+        Quando o usuário opta por "remover", o código solicita o nome do item a ser excluído. Em seguida, ele procura todas as ocorrências desse item na lista e utiliza um loop while para removê-las uma a uma com o método splice. O código informa se o item foi removido com sucesso ou se não estava presente na lista.
+
+        Quando o usuário decide encerrar e responde "não", a lista final de compras é exibida. O loop termina, e a lista consolidada é apresentada para revisão.
+        
+        Experimente o código e veja como ele facilita a gestão da sua lista de compras, agora com a possibilidade de remover itens. Basta clicar no botão abaixo.
+    </p>
+
+ 
+
+</div>
+<button onclick="day6()" class="botoes">testar</button>
+<script src="../app.js" defer></script>
+    
+</body>
+
+</html>

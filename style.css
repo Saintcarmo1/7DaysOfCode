@@ -95,3 +95,13 @@ body{
 .texto_corpo{
     background-color: #ffffffa6;
 }
+
+.rodape{
+    font-family: "Oswald", sans-serif;
+    color: var(--cor-segundaria);  
+}
+
+.rodape_logos{
+    display: flex;
+    justify-content:flex-start;
+}
